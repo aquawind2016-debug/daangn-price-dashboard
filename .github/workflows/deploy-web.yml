@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - 'frontend-web/**'
+  workflow_dispatch: # 이 한 줄을 추가해주세요!
 
 permissions:
   contents: read
