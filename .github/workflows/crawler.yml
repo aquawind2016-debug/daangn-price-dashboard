@@ -8,6 +8,8 @@ on:
 jobs:
   scrape_and_save:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # 봇이 파일에 쓰기(업로드) 권한을 가질 수 있도록 추가합니다.
 
     steps:
       - name: Checkout Code
@@ -26,3 +28,11 @@ jobs:
 
       - name: Run Crawler & Save Result
         run: python backend-crawler/main.py
+
+      # 새로 수집된 데이터를 GitHub에 영구적으로 저장하는 마법의 명령어입니다!
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          git add frontend-web/public/data.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 자동 업데이트: 당근마켓 최신 시세 데이터 반영" && git push)
