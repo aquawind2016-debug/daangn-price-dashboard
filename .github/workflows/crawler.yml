@@ -28,8 +28,11 @@ jobs:
         run: python backend-crawler/main.py
 
       - name: Commit and Push CSV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git add backend-crawler/daangn_result.csv
           git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 자동 업데이트: 당근마켓 데이터 적재" && git push)
