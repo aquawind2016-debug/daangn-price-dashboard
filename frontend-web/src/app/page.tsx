@@ -23,9 +23,9 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // GitHub Pages 주소에 맞게 설정 (basePath)
-    // 크롤러가 저장한 data.json 파일을 불러옵니다.
-    fetch('/daangn-price-dashboard/data.json')
+    // 💡 핵심 변경 사항: ?t= 뒤에 현재 시간을 붙여서 브라우저가 옛날 데이터(캐시)를 못 쓰게 강제합니다!
+    const timestamp = new Date().getTime();
+    fetch(`/daangn-price-dashboard/data.json?t=${timestamp}`)
       .then((res) => res.json())
       .then((jsonData) => {
         setData(jsonData);
@@ -41,7 +41,7 @@ export default function Home() {
     return (
       <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
         <h2>⏳ 데이터를 불러오는 중입니다...</h2>
-        <p>파이썬 크롤러가 데이터를 수집 중이거나 연동을 기다리고 있습니다.</p>
+        <p>파이썬 크롤러가 최신 시세를 수집 중입니다.</p>
       </div>
     );
   }
