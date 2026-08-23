@@ -38,15 +38,3 @@ steps:
       git config --global user.email "github-actions[bot]@users.noreply.github.com"
       git add backend-crawler/daangn_result.csv
       git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 자동 업데이트: 당근마켓 데이터 적재" && git push)
-
-
-
-4. 우측 상단의 **`Commit changes...`** 를 눌러 저장합니다.
-
----
-
-### 🚀 다시 실행해보기!
-
-이제 다시 상단의 **`Actions`** 탭으로 가서 왼쪽의 **`당근마켓 시세 자동 수집기`**를 누르고, 우측 상단의 **`Run workflow`**를 눌러 수동 실행을 다시 해보세요! 
-
-이번에는 권한 문제가 해결되면서 초록색 ✅(성공)이 뜨고, 리포지토리에 진짜 CSV 파일이 쏙 들어가게 될 겁니다. 성공하면 화면을 보여주세요! 거의 다 왔습니다!
