@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import re
 import os
+import json # JSON 파일 저장을 위해 추가
 
 async def crawl_daangn(keyword: str, max_pages: int = 3):
     results = []
@@ -106,7 +107,14 @@ def cleanse_and_filter(data_list, keyword=""):
 
 if __name__ == "__main__":
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    save_path = os.path.join(current_dir, "daangn_result.csv")
+    
+    # 1. 웹사이트 폴더 경로 설정 (frontend-web/public)
+    project_root = os.path.dirname(current_dir)
+    frontend_public_dir = os.path.join(project_root, "frontend-web", "public")
+    os.makedirs(frontend_public_dir, exist_ok=True)
+    
+    save_path_json = os.path.join(frontend_public_dir, "data.json")
+    
     search_keyword = "아이패드 에어 5세대" 
     
     loop = asyncio.get_event_loop()
@@ -114,5 +122,36 @@ if __name__ == "__main__":
     refined_df = cleanse_and_filter(raw_data, search_keyword)
     
     if not refined_df.empty:
-        refined_df.to_csv(save_path, index=False, encoding='utf-8-sig')
-        print(f"\n💾 결과를 업데이트 했습니다: {save_path}")
+        # 2. 통계 계산 (평균가, 최저가, 최고가)
+        avg_price = int(refined_df['price'].mean())
+        min_price = int(refined_df['price'].min())
+        max_price = int(refined_df['price'].max())
+        
+        # 3. 꿀매물 추출 (평균가보다 저렴한 상품 중 상위 5개)
+        hot_deals_df = refined_df[refined_df['price'] < avg_price].sort_values(by='price').head(5)
+        
+        hot_deals = []
+        for _, row in hot_deals_df.iterrows():
+            hot_deals.append({
+                "title": row['title'],
+                "price": int(row['price']),
+                "link": row['url'],
+                "discount_gap": avg_price - int(row['price'])
+            })
+            
+        # 4. JSON 데이터 조립
+        dashboard_data = {
+            "keyword": search_keyword,
+            "average_price": avg_price,
+            "min_price": min_price,
+            "max_price": max_price,
+            "hot_deals": hot_deals
+        }
+        
+        # 5. 프론트엔드 폴더에 data.json으로 저장
+        with open(save_path_json, 'w', encoding='utf-8') as f:
+            json.dump(dashboard_data, f, ensure_ascii=False, indent=2)
+            
+        print(f"\n💾 웹사이트 연동을 위해 JSON 파일을 업데이트 했습니다: {save_path_json}")
+    else:
+        print("\n❌ 조건에 맞는 매물을 찾지 못했습니다.")
