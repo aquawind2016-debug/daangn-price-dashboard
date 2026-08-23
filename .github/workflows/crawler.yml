@@ -24,5 +24,5 @@ jobs:
           pip install playwright pandas beautifulsoup4
           playwright install --with-deps chromium
 
-      - name: Run Crawler
+      - name: Run Crawler & Save Result
         run: python backend-crawler/main.py
