@@ -1,35 +1,52 @@
 name: 당근마켓 시세 자동 수집기 (Daily Crawler)
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'
+workflow_dispatch:
+schedule:
+- cron: '0 0 * * *'
+
+🔑 봇에게 Git 푸시 권한을 명시적으로 부여합니다
+
+permissions:
+contents: write
 
 jobs:
-  scrape_and_save:
-    runs-on: ubuntu-latest
+scrape_and_save:
+runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+steps:
+  - name: Checkout Code
+    uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
+  - name: Setup Python
+    uses: actions/setup-python@v5
+    with:
+      python-version: '3.10'
 
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install playwright pandas beautifulsoup4
-          playwright install --with-deps chromium
+  - name: Install Dependencies
+    run: |
+      python -m pip install --upgrade pip
+      pip install playwright pandas beautifulsoup4
+      playwright install --with-deps chromium
 
-      - name: Run Crawler
-        run: python backend-crawler/main.py
+  - name: Run Crawler
+    run: python backend-crawler/main.py
 
-      - name: Commit and Push CSV
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add backend-crawler/daangn_result.csv
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 자동 업데이트: 당근마켓 최신 시세 데이터 적재" && git push)
+  - name: Commit and Push CSV
+    run: |
+      git config --global user.name "github-actions[bot]"
+      git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      git add backend-crawler/daangn_result.csv
+      git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 자동 업데이트: 당근마켓 데이터 적재" && git push)
+
+
+
+4. 우측 상단의 **`Commit changes...`** 를 눌러 저장합니다.
+
+---
+
+### 🚀 다시 실행해보기!
+
+이제 다시 상단의 **`Actions`** 탭으로 가서 왼쪽의 **`당근마켓 시세 자동 수집기`**를 누르고, 우측 상단의 **`Run workflow`**를 눌러 수동 실행을 다시 해보세요! 
+
+이번에는 권한 문제가 해결되면서 초록색 ✅(성공)이 뜨고, 리포지토리에 진짜 CSV 파일이 쏙 들어가게 될 겁니다. 성공하면 화면을 보여주세요! 거의 다 왔습니다!
