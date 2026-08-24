@@ -1,13 +1,11 @@
 'use client';
-
 import { useEffect, useState } from 'react';
 
-// 데이터의 형태(타입)를 정의합니다.
-interface HotDeal {
+interface Deal {
   title: string;
   price: number;
-  link: string;
-  discount_gap: number;
+  url: string;
+  status: string;
 }
 
 interface DashboardData {
@@ -15,15 +13,16 @@ interface DashboardData {
   average_price: number;
   min_price: number;
   max_price: number;
-  hot_deals: HotDeal[];
+  available_items: Deal[];
+  completed_items: Deal[];
 }
 
 export default function Home() {
   const [data, setData] = useState<DashboardData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState<'available' | 'completed'>('available');
 
   useEffect(() => {
-    // 💡 핵심 변경 사항: ?t= 뒤에 현재 시간을 붙여서 브라우저가 옛날 데이터(캐시)를 못 쓰게 강제합니다!
     const timestamp = new Date().getTime();
     fetch(`/daangn-price-dashboard/data.json?t=${timestamp}`)
       .then((res) => res.json())
@@ -32,57 +31,65 @@ export default function Home() {
         setLoading(false);
       })
       .catch((error) => {
-        console.error('데이터를 불러오는 중 에러 발생:', error);
+        console.error('에러:', error);
         setLoading(false);
       });
   }, []);
 
-  if (loading) {
-    return (
-      <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
-        <h2>⏳ 데이터를 불러오는 중입니다...</h2>
-        <p>파이썬 크롤러가 최신 시세를 수집 중입니다.</p>
-      </div>
-    );
-  }
+  if (loading) return <div style={{ padding: '20px', fontFamily: 'sans-serif' }}><h2>⏳ 데이터를 불러오는 중입니다...</h2></div>;
+  if (!data) return <div style={{ padding: '20px', fontFamily: 'sans-serif' }}><h2>❌ 데이터를 찾을 수 없습니다.</h2></div>;
 
-  if (!data) {
-    return (
-      <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
-        <h2>❌ 데이터를 찾을 수 없습니다.</h2>
-        <p>크롤러가 정상적으로 data.json 파일을 생성했는지 확인해주세요.</p>
-      </div>
-    );
-  }
+  const itemsToShow = activeTab === 'available' ? data.available_items : data.completed_items;
 
   return (
     <main style={{ padding: '20px', fontFamily: 'sans-serif', maxWidth: '800px', margin: '0 auto' }}>
       <h1>🥕 당근시세 대시보드</h1>
-      <p style={{ color: '#ff6f0f', fontWeight: 'bold' }}>거품 없는 진짜 중고 시세</p>
       
       <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px', marginBottom: '20px' }}>
         <h3>🔍 분석 키워드: {data.keyword}</h3>
+        <p style={{ color: '#888', fontSize: '14px', margin: '-10px 0 15px 0' }}>* 시세 통계는 '거래가능' 매물 기준입니다.</p>
         <p><strong>적정 시세 (평균가):</strong> {data.average_price.toLocaleString()}원</p>
         <p><strong>발견된 최저가:</strong> {data.min_price.toLocaleString()}원</p>
         <p><strong>발견된 최고가:</strong> {data.max_price.toLocaleString()}원</p>
       </div>
 
-      <h2>🔥 실시간 최저가 꿀매물</h2>
+      {/* 탭 버튼 */}
+      <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
+        <button 
+          onClick={() => setActiveTab('available')}
+          style={{
+            flex: 1, padding: '15px', fontSize: '16px', fontWeight: 'bold', border: 'none', borderRadius: '8px',
+            background: activeTab === 'available' ? '#ff6f0f' : '#ddd', 
+            color: activeTab === 'available' ? '#fff' : '#333', cursor: 'pointer'
+          }}
+        >
+          🟢 거래가능 Top 30
+        </button>
+        <button 
+          onClick={() => setActiveTab('completed')}
+          style={{
+            flex: 1, padding: '15px', fontSize: '16px', fontWeight: 'bold', border: 'none', borderRadius: '8px',
+            background: activeTab === 'completed' ? '#333' : '#ddd', 
+            color: activeTab === 'completed' ? '#fff' : '#333', cursor: 'pointer'
+          }}
+        >
+          ⚫ 거래완료 Top 30
+        </button>
+      </div>
+
       <ul style={{ listStyle: 'none', padding: 0 }}>
-        {data.hot_deals.map((deal, index) => (
-          <li key={index} style={{ borderBottom: '1px solid #ddd', padding: '10px 0' }}>
-            <a href={deal.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: '#333', fontSize: '18px', display: 'block' }}>
-              <span style={{ color: '#ff6f0f', marginRight: '8px' }}>{index + 1}위</span>
+        {itemsToShow.map((deal, index) => (
+          <li key={index} style={{ borderBottom: '1px solid #ddd', padding: '15px 0' }}>
+            <a href={deal.url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: '#333', fontSize: '18px', display: 'block' }}>
+              <span style={{ color: activeTab === 'available' ? '#ff6f0f' : '#888', marginRight: '8px', fontWeight: 'bold' }}>{index + 1}위</span>
               {deal.title}
             </a>
-            <p style={{ margin: '5px 0', fontSize: '16px', fontWeight: 'bold' }}>
-              {deal.price.toLocaleString()}원 
-              <span style={{ color: 'green', fontSize: '14px', marginLeft: '10px' }}>
-                (적정 시세 대비 {deal.discount_gap.toLocaleString()}원 저렴 ↓)
-              </span>
+            <p style={{ margin: '8px 0 0 0', fontSize: '16px', fontWeight: 'bold' }}>
+              {deal.price.toLocaleString()}원
             </p>
           </li>
         ))}
+        {itemsToShow.length === 0 && <p style={{ textAlign: 'center', color: '#888' }}>해당 조건의 매물이 없습니다.</p>}
       </ul>
     </main>
   );
