@@ -1,14 +1,14 @@
 {
-  "keyword": "아이패드 에어 5세대",
-  "average_price": 780000,
-  "min_price": 750000,
-  "max_price": 840000,
+  "keyword": "수집 실패 (당근마켓 봇 차단🚨)",
+  "average_price": 0,
+  "min_price": 0,
+  "max_price": 0,
   "hot_deals": [
     {
-      "title": "아이패드 에어 5세대 64G 미개봉 새상품 (데이터 연동 테스트)",
-      "price": 750000,
+      "title": "안전망 작동 완료! 다시 시도하거나 키워드를 변경해 보세요.",
+      "price": 0,
       "link": "#",
-      "discount_gap": 30000
+      "discount_gap": 0
     }
   ]
 }
