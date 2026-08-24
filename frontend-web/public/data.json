@@ -1,38 +1,94 @@
 {
-  "keyword": "아이패드 에어 5세대",
-  "average_price": 443212,
-  "min_price": 4000,
-  "max_price": 930000,
-  "hot_deals": [
+  "keyword": "카시트거울",
+  "average_price": 360000,
+  "min_price": 360000,
+  "max_price": 360000,
+  "available_items": [
+    {
+      "title": "브라이텍스 듀얼픽스 아이사이즈 카시트",
+      "price": 360000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EB%B8%8C%EB%9D%BC%EC%9D%B4%ED%85%8D%EC%8A%A4-%EB%93%80%EC%96%BC%ED%94%BD%EC%8A%A4-%EC%95%84%EC%9D%B4%EC%82%AC%EC%9D%B4%EC%A6%88-%EC%B9%B4%EC%8B%9C%ED%8A%B8-1hiaq72p18fq/",
+      "status": "available"
+    }
+  ],
+  "completed_items": [
     {
       "title": "거래완료",
-      "price": 4000,
-      "link": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EC%BC%80%EC%9D%B4%EC%8A%A4-%ED%82%A4%EB%B3%B4%EB%93%9C-%ED%8C%8C%EC%9A%B0%EC%B9%98-%EC%84%B8%ED%8A%B8-dotftcby9o5p/",
-      "discount_gap": 439212
+      "price": 1000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EB%B6%80%EC%97%94-%EC%B9%B4%EC%8B%9C%ED%8A%B8-%EB%92%A4%EB%B3%B4%EA%B8%B0-%EA%B1%B0%EC%9A%B8-zutrm6w3247o/",
+      "status": "completed"
+    },
+    {
+      "title": "거래완료",
+      "price": 5000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EB%A9%94%EB%A6%AC%EB%B3%B8-%EC%B9%B4%EC%8B%9C%ED%8A%B8-%ED%9B%84%EB%B0%A9%EA%B1%B0%EC%9A%B8-wt4em1ifavdu/",
+      "status": "completed"
+    },
+    {
+      "title": "거래완료",
+      "price": 7000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EB%B2%A4%EB%B0%A7-%EC%95%84%EA%B8%B0-%EC%B0%A8%EB%9F%89%EC%9A%A9-%ED%9B%84%EB%B0%A9-%EA%B1%B0%EC%9A%B8-%ED%95%91%ED%81%AC-wa6fd1budzar/",
+      "status": "completed"
+    },
+    {
+      "title": "거래완료",
+      "price": 7000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EB%A5%B4%EB%A9%94%EC%9D%B4%EC%96%B4-%EC%B0%A8%EB%9F%89%EC%9A%A9-%EC%9C%A0%EC%95%84-%EC%95%88%EC%A0%84-%EC%99%80%EC%9D%B4%EB%93%9C-%EC%B9%B4%EC%8B%9C%ED%8A%B8-%ED%9B%84%EB%B0%A9-%EA%B1%B0%EC%9A%B8-%ED%8C%9D%EB%8B%88%EB%8B%A4-4bjbk6if4cs6/",
+      "status": "completed"
+    },
+    {
+      "title": "거래완료",
+      "price": 9000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%B9%B4%EC%8B%9C%ED%8A%B8-%ED%9B%84%EB%B0%A9%EA%B1%B0%EC%9A%B8-%EC%83%81%ED%83%9C%EC%A2%8B%EC%9D%8C-fh5i98zrjdrn/",
+      "status": "completed"
     },
     {
       "title": "거래완료",
       "price": 10000,
-      "link": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EC%97%90%EC%96%B4-5%EC%84%B8%EB%8C%80-%ED%8D%BC%ED%94%8C-%EC%95%A0%ED%94%8C%ED%8E%9C%EC%8A%AC-2%EC%84%B8%EB%8C%80-%EB%B0%95%EC%8A%A4-3msigqtq2vey/",
-      "discount_gap": 433212
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%82%AC%EA%B3%BC%EB%AA%A8%EC%96%91-%EC%95%88%EC%A0%84-%EA%B1%B0%EC%9A%B8-%EC%B9%B4%EC%8B%9C%ED%8A%B8-%EA%B1%B0%EC%9A%B8-m8u3ffnh4gtn/",
+      "status": "completed"
     },
     {
       "title": "거래완료",
-      "price": 45000,
-      "link": "https://www.daangn.com/kr/buy-sell/%EB%A1%9C%EC%A7%80%ED%85%8D-%ED%8F%B4%EB%A6%AC%EC%98%A4-%ED%84%B0%EC%B9%98-%ED%82%A4%EB%B3%B4%EB%93%9C-%EC%BC%80%EC%9D%B4%EC%8A%A4-d8ma7gieyo42/",
-      "discount_gap": 398212
+      "price": 10000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EB%B0%B4%EB%B0%A7%EC%98%AC%EB%A6%AC-%EC%B9%B4%EC%8B%9C%ED%8A%B8-%ED%9B%84%EB%B0%A9%EA%B1%B0%EC%9A%B8-ree32yz2zzfa/",
+      "status": "completed"
     },
     {
-      "title": "니케 Magsnap Air Charge 아이패드 거치대(단순개봉)",
+      "title": "거래완료",
+      "price": 15000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%98%AC%EB%A6%AC-%EC%B9%B4%EC%8B%9C%ED%8A%B8-%EA%B1%B0%EC%9A%B8-%EC%B9%98%EC%BD%94-%EC%95%84%EA%B8%B0%EB%B9%84%EB%8D%B0-qb9fgotf3g2t/",
+      "status": "completed"
+    },
+    {
+      "title": "거래완료",
+      "price": 20000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EB%8B%A4%EC%9D%B4%EC%B9%98-%EC%B9%B4%EC%8B%9C%ED%8A%B8-360%ED%9A%8C%EC%A0%84-%ED%9B%84%EB%B0%A9%EA%B1%B0%EC%9A%B8-ea7shovp7vdj/",
+      "status": "completed"
+    },
+    {
+      "title": "거래완료",
+      "price": 30000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EB%B8%8C%EB%9D%BC%EC%9D%B4%ED%85%8D%EC%8A%A4-%EB%93%80%EC%96%BC%ED%94%BD%EC%8A%A42-%ED%9A%8C%EC%A0%84%ED%98%95-isofix-%EC%B9%B4%EC%8B%9C%ED%8A%B8-11zznfgoqh8p/",
+      "status": "completed"
+    },
+    {
+      "title": "거래완료",
+      "price": 75000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%A1%B0%EC%9D%B4-360%EB%8F%84-%ED%9A%8C%EC%A0%84-%EC%B9%B4%EC%8B%9C%ED%8A%B8-2%EA%B0%9C-weia46epkg7x/",
+      "status": "completed"
+    },
+    {
+      "title": "거래완료",
       "price": 85000,
-      "link": "https://www.daangn.com/kr/buy-sell/%EB%8B%88%EC%BC%80-magsnap-air-charge-%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EA%B1%B0%EC%B9%98%EB%8C%80-%EB%8B%A8%EC%88%9C%EA%B0%9C%EB%B4%89-ve7u84akn77o/",
-      "discount_gap": 358212
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%A1%B0%EC%9D%B4-%EC%8A%A4%ED%95%80-360-%EC%B9%B4%EC%8B%9C%ED%8A%B8-%EB%B8%94%EB%9E%99-zzo9nxca53n8/",
+      "status": "completed"
     },
     {
       "title": "거래완료",
-      "price": 90000,
-      "link": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-11%EC%9D%B8%EC%B9%98-%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%82%A4%EB%B3%B4%EB%93%9C%ED%8F%B4%EB%A6%AC%EC%98%A4-%EC%A0%95%ED%92%88-gyw361osm7e8/",
-      "discount_gap": 353212
+      "price": 150000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EB%B8%8C%EB%9D%BC%EC%9D%B4%ED%85%8D%EC%8A%A4-%EB%93%80%EC%96%BC%ED%94%BD%EC%8A%A4-%EC%95%84%EC%9D%B4%EC%82%AC%EC%9D%B4%EC%A6%88-%EC%B9%B4%EC%8B%9C%ED%8A%B8-yb4cwk7gnnvj/",
+      "status": "completed"
     }
   ]
 }
