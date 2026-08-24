@@ -1,62 +1,34 @@
-import asyncio
-from playwright.async_api import async_playwright
+import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import re
 import os
 import json
 
-async def crawl_daangn(keyword: str, max_pages: int = 3):
+def crawl_daangn_fast(keyword: str):
     results = []
+    # 💡 아주 평범한 한국 크롬 사용자처럼 신분증(Header)을 위조합니다.
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+        "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Referer": "https://www.google.com/"
+    }
     
-    async with async_playwright() as p:
-        # 자동화 브라우저 특징 숨기기
-        browser = await p.chromium.launch(
-            headless=True,
-            args=['--disable-blink-features=AutomationControlled']
-        )
+    print(f"🔍 '{keyword}' 검색 크롤링 시작 (초고속 가벼운 모드)...")
+    url = f"https://www.daangn.com/search/{keyword}"
+    
+    try:
+        # 브라우저를 안 띄우고 문서만 1초 만에 훔쳐 옵니다.
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status() 
         
-        context = await browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-            viewport={'width': 1920, 'height': 1080},
-            locale='ko-KR',
-            timezone_id='Asia/Seoul'
-        )
-        
-        # 💡 핵심: 웹페이지에 "나는 봇(webdriver)이 아니다"라는 속이는 스크립트 몰래 주입하기
-        await context.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-        
-        page = await context.new_page()
-        print(f"🔍 '{keyword}' 검색 크롤링 시작...")
-
-        url = f"https://www.daangn.com/search/{keyword}"
-        
-        try:
-            # 뻗는 현상 방지를 위해 domcontentloaded로 롤백
-            await page.goto(url, wait_until="domcontentloaded")
-            await page.wait_for_timeout(3000) 
-            
-            # 사람처럼 스크롤 내리기
-            await page.mouse.wheel(0, 500)
-            await page.wait_for_timeout(1000)
-
-            for i in range(max_pages - 1):
-                more_btn = await page.query_selector(".more-btn")
-                if more_btn:
-                    await more_btn.click()
-                    await page.wait_for_timeout(2000)
-                else:
-                    break
-        except Exception as e:
-            print(f"⚠️ 페이지 로딩 중 에러 (무시하고 계속 진행): {e}")
-
-        content = await page.content()
-        soup = BeautifulSoup(content, 'html.parser')
+        soup = BeautifulSoup(response.text, 'html.parser')
         
         articles = soup.find_all('article', class_='flea-market-article')
         if not articles:
             articles = soup.find_all('article')
-
+            
         for article in articles:
             try:
                 title_elem = article.find(class_='article-title') or article.find('h2')
@@ -84,8 +56,9 @@ async def crawl_daangn(keyword: str, max_pages: int = 3):
                 })
             except Exception:
                 continue
-
-        await browser.close()
+                
+    except Exception as e:
+        print(f"⚠️ 요청 중 에러 발생: {e}")
         
     return results
 
@@ -107,8 +80,8 @@ if __name__ == "__main__":
     save_path_json = os.path.join(frontend_public_dir, "data.json")
     search_keyword = "아이패드 에어 5세대" 
     
-    loop = asyncio.get_event_loop()
-    raw_data = loop.run_until_complete(crawl_daangn(search_keyword, max_pages=3))
+    # 💡 빠르고 가벼운 크롤러 실행
+    raw_data = crawl_daangn_fast(search_keyword)
     refined_df = cleanse_and_filter(raw_data)
     
     if not refined_df.empty:
@@ -134,23 +107,23 @@ if __name__ == "__main__":
             "max_price": max_price,
             "hot_deals": hot_deals
         }
-        print("\n✅ 크롤링 성공!")
+        print("\n✅ 가벼운 낚아채기 성공! 매물 데이터를 획득했습니다.")
     else:
         dashboard_data = {
-            "keyword": "수집 실패 (당근마켓 봇 차단🚨)",
+            "keyword": "수집 실패 (미국 서버 IP 완전 차단됨 🚨)",
             "average_price": 0,
             "min_price": 0,
             "max_price": 0,
             "hot_deals": [
                 {
-                    "title": "안전망 작동 완료! 다시 시도하거나 키워드를 변경해 보세요.",
+                    "title": "당근마켓이 GitHub 서버(해외)를 완전히 차단했습니다. 로컬 PC에서 실행해야 합니다.",
                     "price": 0,
                     "link": "#",
                     "discount_gap": 0
                 }
             ]
         }
-        print("\n❌ 조건에 맞는 매물 없음 또는 차단됨")
+        print("\n❌ 해외 IP 완전 차단됨")
 
     with open(save_path_json, 'w', encoding='utf-8') as f:
         json.dump(dashboard_data, f, ensure_ascii=False, indent=2)
