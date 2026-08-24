@@ -1,94 +1,188 @@
 {
-  "keyword": "카시트거울",
-  "average_price": 360000,
-  "min_price": 360000,
-  "max_price": 360000,
-  "available_items": [
+  "keyword": "도봉구 아이패드",
+  "average_price": 6211382,
+  "min_price": 1000,
+  "max_price": 999999999,
+  "items": [
     {
-      "title": "브라이텍스 듀얼픽스 아이사이즈 카시트",
-      "price": 360000,
-      "url": "https://www.daangn.com/kr/buy-sell/%EB%B8%8C%EB%9D%BC%EC%9D%B4%ED%85%8D%EC%8A%A4-%EB%93%80%EC%96%BC%ED%94%BD%EC%8A%A4-%EC%95%84%EC%9D%B4%EC%82%AC%EC%9D%B4%EC%A6%88-%EC%B9%B4%EC%8B%9C%ED%8A%B8-1hiaq72p18fq/",
-      "status": "available"
-    }
-  ],
-  "completed_items": [
-    {
-      "title": "거래완료",
+      "title": "아이패드 애플 로고 스티커",
       "price": 1000,
-      "url": "https://www.daangn.com/kr/buy-sell/%EB%B6%80%EC%97%94-%EC%B9%B4%EC%8B%9C%ED%8A%B8-%EB%92%A4%EB%B3%B4%EA%B8%B0-%EA%B1%B0%EC%9A%B8-zutrm6w3247o/",
-      "status": "completed"
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EC%95%A0%ED%94%8C-%EB%A1%9C%EA%B3%A0-%EC%8A%A4%ED%8B%B0%EC%BB%A4-b4t74hov4aoh/",
+      "region": "9개월 전"
     },
     {
-      "title": "거래완료",
+      "title": "브런치브라더 펭귄 아이패드 파우치 (11인치)",
+      "price": 1000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EB%B8%8C%EB%9F%B0%EC%B9%98%EB%B8%8C%EB%9D%BC%EB%8D%94-%ED%8E%AD%EA%B7%84-%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%ED%8C%8C%EC%9A%B0%EC%B9%98-11%EC%9D%B8%EC%B9%98-ixzb3yn98ap5/",
+      "region": "끌올 11일 전"
+    },
+    {
+      "title": "아이패드 거치대 올인원 퀵스탠드 케이스 11세대/10세대",
+      "price": 1110,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EA%B1%B0%EC%B9%98%EB%8C%80-%EC%98%AC%EC%9D%B8%EC%9B%90-%ED%80%B5%EC%8A%A4%ED%83%A0%EB%93%9C-%EC%BC%80%EC%9D%B4%EC%8A%A4-11%EC%84%B8%EB%8C%80-10%EC%84%B8%EB%8C%80-ax2b5c612gum/",
+      "region": "끌올 2일 전"
+    },
+    {
+      "title": "파우치 (새상품)",
+      "price": 2000,
+      "url": "https://www.daangn.com/kr/buy-sell/%ED%8C%8C%EC%9A%B0%EC%B9%98-%EC%83%88%EC%83%81%ED%92%88-8f2qb1mnayei/",
+      "region": "끌올 3개월 전"
+    },
+    {
+      "title": "필라 에코백",
+      "price": 2000,
+      "url": "https://www.daangn.com/kr/buy-sell/%ED%95%84%EB%9D%BC-%EC%97%90%EC%BD%94%EB%B0%B1-in2grin2ucue/",
+      "region": "끌올 1개월 전"
+    },
+    {
+      "title": "TABLESE 아이패드 에어 M2/M3 11인치 강화유리필름",
+      "price": 2000,
+      "url": "https://www.daangn.com/kr/buy-sell/tablese-%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EC%97%90%EC%96%B4-m2-m3-11%EC%9D%B8%EC%B9%98-%EA%B0%95%ED%99%94%EC%9C%A0%EB%A6%AC%ED%95%84%EB%A6%84-e9xtco66766b/",
+      "region": "끌올 1개월 전"
+    },
+    {
+      "title": "아이패드 케이스 파우치",
+      "price": 2000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EC%BC%80%EC%9D%B4%EC%8A%A4-%ED%8C%8C%EC%9A%B0%EC%B9%98-peqx62jv1ud5/",
+      "region": "끌올 4일 전"
+    },
+    {
+      "title": "아이패드 파우치",
+      "price": 2000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%ED%8C%8C%EC%9A%B0%EC%B9%98-wjp81gaaxwz6/",
+      "region": "끌올 2개월 전"
+    },
+    {
+      "title": "아이패드 케이스 파우치. 새상픔2",
+      "price": 2000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EC%BC%80%EC%9D%B4%EC%8A%A4-%ED%8C%8C%EC%9A%B0%EC%B9%98-%EC%83%88%EC%83%81%ED%94%942-9f5z7rs7yw9s/",
+      "region": "끌올 16시간 전"
+    },
+    {
+      "title": "머스터드 노트북가방",
+      "price": 3000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EB%A8%B8%EC%8A%A4%ED%84%B0%EB%93%9C-%EB%85%B8%ED%8A%B8%EB%B6%81%EA%B0%80%EB%B0%A9-ie9u4uz3kvrv/",
+      "region": "끌올 19일 전"
+    },
+    {
+      "title": "아이패드 파우치",
+      "price": 3000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%ED%8C%8C%EC%9A%B0%EC%B9%98-7jgmjt5c8v4k/",
+      "region": "6일 전"
+    },
+    {
+      "title": "아이패드 미니7, 미니6 케이스",
+      "price": 3000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EB%AF%B8%EB%8B%887-%EB%AF%B8%EB%8B%886-%EC%BC%80%EC%9D%B4%EC%8A%A4-qpcn7b7q7y2o/",
+      "region": "3시간 전"
+    },
+    {
+      "title": "신지모루 아이패드 프로 11인치 12.9인치 종이질감 강화유리",
+      "price": 3000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%8B%A0%EC%A7%80%EB%AA%A8%EB%A3%A8-%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%ED%94%84%EB%A1%9C-11%EC%9D%B8%EC%B9%98-12-9%EC%9D%B8%EC%B9%98-%EC%A2%85%EC%9D%B4%EC%A7%88%EA%B0%90-%EA%B0%95%ED%99%94%EC%9C%A0%EB%A6%AC-h896pgfdianb/",
+      "region": "끌올 5일 전"
+    },
+    {
+      "title": "5000",
+      "price": 3000,
+      "url": "https://www.daangn.com/kr/buy-sell/5000-d8hvvcryvbh3/",
+      "region": "끌올 2년 전"
+    },
+    {
+      "title": "카카오프렌즈  파우치",
+      "price": 3000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%94%84%EB%A0%8C%EC%A6%88-%ED%8C%8C%EC%9A%B0%EC%B9%98-fbhr342xr7pr/",
+      "region": "끌올 4개월 전"
+    },
+    {
+      "title": "신지모루  폴리오 애플펜슬 커버 아이패드케이스 프로",
+      "price": 3000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%8B%A0%EC%A7%80%EB%AA%A8%EB%A3%A8-%ED%8F%B4%EB%A6%AC%EC%98%A4-%EC%95%A0%ED%94%8C%ED%8E%9C%EC%8A%AC-%EC%BB%A4%EB%B2%84-%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%EC%BC%80%EC%9D%B4%EC%8A%A4-%ED%94%84%EB%A1%9C-ppzyc78mkupd/",
+      "region": "끌올 2개월 전"
+    },
+    {
+      "title": "에코백",
+      "price": 3000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%97%90%EC%BD%94%EB%B0%B1-pb8mv1abgqqt/",
+      "region": "끌올 1년 전"
+    },
+    {
+      "title": "COSY 무선 블루투스 키보드 KB1352BT(고장)",
+      "price": 3000,
+      "url": "https://www.daangn.com/kr/buy-sell/cosy-%EB%AC%B4%EC%84%A0-%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4-%ED%82%A4%EB%B3%B4%EB%93%9C-kb1352bt-%EA%B3%A0%EC%9E%A5-9specenxqqbd/",
+      "region": "10개월 전"
+    },
+    {
+      "title": "신지모루 아이패드 프로 강화유리 필름",
+      "price": 3000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%8B%A0%EC%A7%80%EB%AA%A8%EB%A3%A8-%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%ED%94%84%EB%A1%9C-%EA%B0%95%ED%99%94%EC%9C%A0%EB%A6%AC-%ED%95%84%EB%A6%84-a1dz3k6j1rj4/",
+      "region": "끌올 2개월 전"
+    },
+    {
+      "title": "커버낫  블랙  클러치백",
+      "price": 3000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%BB%A4%EB%B2%84%EB%82%AB-%EB%B8%94%EB%9E%99-%ED%81%B4%EB%9F%AC%EC%B9%98%EB%B0%B1-uw35fhbm9esh/",
+      "region": "끌올 8일 전"
+    },
+    {
+      "title": "태블릿 회전 거치대",
+      "price": 4000,
+      "url": "https://www.daangn.com/kr/buy-sell/%ED%83%9C%EB%B8%94%EB%A6%BF-%ED%9A%8C%EC%A0%84-%EA%B1%B0%EC%B9%98%EB%8C%80-iirnwqkvezcu/",
+      "region": "끌올 5일 전"
+    },
+    {
+      "title": "미사용 / 아이폰 라이트닝 스플리터 / 아이폰 변환 젠더 / 아이패드 변환 젠더 / 새상품",
+      "price": 4000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EB%AF%B8%EC%82%AC%EC%9A%A9-%EC%95%84%EC%9D%B4%ED%8F%B0-%EB%9D%BC%EC%9D%B4%ED%8A%B8%EB%8B%9D-%EC%8A%A4%ED%94%8C%EB%A6%AC%ED%84%B0-%EC%95%84%EC%9D%B4%ED%8F%B0-%EB%B3%80%ED%99%98-%EC%A0%A0%EB%8D%94-%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EB%B3%80%ED%99%98-%EC%A0%A0%EB%8D%94-%EC%83%88%EC%83%81%ED%92%88-vwt1as6hmmuf/",
+      "region": "끌올 8개월 전"
+    },
+    {
+      "title": "아이패드 파우치",
+      "price": 4000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%ED%8C%8C%EC%9A%B0%EC%B9%98-8bkbf4px3k3v/",
+      "region": "끌올 2개월 전"
+    },
+    {
+      "title": "아이패드/맥북 케이스 (13인치)",
+      "price": 4000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EB%A7%A5%EB%B6%81-%EC%BC%80%EC%9D%B4%EC%8A%A4-13%EC%9D%B8%EC%B9%98-cj238kfw682k/",
+      "region": "9개월 전"
+    },
+    {
+      "title": "로랜텍 아이패드 종이질감 보호필름 6/7/8세대 11인치",
+      "price": 4000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EB%A1%9C%EB%9E%9C%ED%85%8D-%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EC%A2%85%EC%9D%B4%EC%A7%88%EA%B0%90-%EB%B3%B4%ED%98%B8%ED%95%84%EB%A6%84-6-7-8%EC%84%B8%EB%8C%80-11%EC%9D%B8%EC%B9%98-7jmkccnwk4xt/",
+      "region": "3개월 전"
+    },
+    {
+      "title": "아이패드/맥북 케이스 (13인치)",
+      "price": 4000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EB%A7%A5%EB%B6%81-%EC%BC%80%EC%9D%B4%EC%8A%A4-13%EC%9D%B8%EC%B9%98-eow51ky9i8nt/",
+      "region": "9개월 전"
+    },
+    {
+      "title": "아이패드 케이스 11인치용",
+      "price": 4000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EC%BC%80%EC%9D%B4%EC%8A%A4-11%EC%9D%B8%EC%B9%98%EC%9A%A9-3cmc9i9dh9vn/",
+      "region": "끌올 2년 전"
+    },
+    {
+      "title": "아이폰/애플워치/애플펜슬/아이패드/삼성S북 [박스 판매]",
+      "price": 4800,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8F%B0-%EC%95%A0%ED%94%8C%EC%9B%8C%EC%B9%98-%EC%95%A0%ED%94%8C%ED%8E%9C%EC%8A%AC-%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EC%82%BC%EC%84%B1s%EB%B6%81-%EB%B0%95%EC%8A%A4-%ED%8C%90%EB%A7%A4-ht11pcx63nah/",
+      "region": "2년 전"
+    },
+    {
+      "title": "아이패드 케이스 11세대 / 10세대 (베이비 핑크)",
       "price": 5000,
-      "url": "https://www.daangn.com/kr/buy-sell/%EB%A9%94%EB%A6%AC%EB%B3%B8-%EC%B9%B4%EC%8B%9C%ED%8A%B8-%ED%9B%84%EB%B0%A9%EA%B1%B0%EC%9A%B8-wt4em1ifavdu/",
-      "status": "completed"
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C-%EC%BC%80%EC%9D%B4%EC%8A%A4-11%EC%84%B8%EB%8C%80-10%EC%84%B8%EB%8C%80-%EB%B2%A0%EC%9D%B4%EB%B9%84-%ED%95%91%ED%81%AC-8ugbmpcrn3xi/",
+      "region": "끌올 3일 전"
     },
     {
-      "title": "거래완료",
-      "price": 7000,
-      "url": "https://www.daangn.com/kr/buy-sell/%EB%B2%A4%EB%B0%A7-%EC%95%84%EA%B8%B0-%EC%B0%A8%EB%9F%89%EC%9A%A9-%ED%9B%84%EB%B0%A9-%EA%B1%B0%EC%9A%B8-%ED%95%91%ED%81%AC-wa6fd1budzar/",
-      "status": "completed"
-    },
-    {
-      "title": "거래완료",
-      "price": 7000,
-      "url": "https://www.daangn.com/kr/buy-sell/%EB%A5%B4%EB%A9%94%EC%9D%B4%EC%96%B4-%EC%B0%A8%EB%9F%89%EC%9A%A9-%EC%9C%A0%EC%95%84-%EC%95%88%EC%A0%84-%EC%99%80%EC%9D%B4%EB%93%9C-%EC%B9%B4%EC%8B%9C%ED%8A%B8-%ED%9B%84%EB%B0%A9-%EA%B1%B0%EC%9A%B8-%ED%8C%9D%EB%8B%88%EB%8B%A4-4bjbk6if4cs6/",
-      "status": "completed"
-    },
-    {
-      "title": "거래완료",
-      "price": 9000,
-      "url": "https://www.daangn.com/kr/buy-sell/%EC%B9%B4%EC%8B%9C%ED%8A%B8-%ED%9B%84%EB%B0%A9%EA%B1%B0%EC%9A%B8-%EC%83%81%ED%83%9C%EC%A2%8B%EC%9D%8C-fh5i98zrjdrn/",
-      "status": "completed"
-    },
-    {
-      "title": "거래완료",
-      "price": 10000,
-      "url": "https://www.daangn.com/kr/buy-sell/%EC%82%AC%EA%B3%BC%EB%AA%A8%EC%96%91-%EC%95%88%EC%A0%84-%EA%B1%B0%EC%9A%B8-%EC%B9%B4%EC%8B%9C%ED%8A%B8-%EA%B1%B0%EC%9A%B8-m8u3ffnh4gtn/",
-      "status": "completed"
-    },
-    {
-      "title": "거래완료",
-      "price": 10000,
-      "url": "https://www.daangn.com/kr/buy-sell/%EB%B0%B4%EB%B0%A7%EC%98%AC%EB%A6%AC-%EC%B9%B4%EC%8B%9C%ED%8A%B8-%ED%9B%84%EB%B0%A9%EA%B1%B0%EC%9A%B8-ree32yz2zzfa/",
-      "status": "completed"
-    },
-    {
-      "title": "거래완료",
-      "price": 15000,
-      "url": "https://www.daangn.com/kr/buy-sell/%EC%98%AC%EB%A6%AC-%EC%B9%B4%EC%8B%9C%ED%8A%B8-%EA%B1%B0%EC%9A%B8-%EC%B9%98%EC%BD%94-%EC%95%84%EA%B8%B0%EB%B9%84%EB%8D%B0-qb9fgotf3g2t/",
-      "status": "completed"
-    },
-    {
-      "title": "거래완료",
-      "price": 20000,
-      "url": "https://www.daangn.com/kr/buy-sell/%EB%8B%A4%EC%9D%B4%EC%B9%98-%EC%B9%B4%EC%8B%9C%ED%8A%B8-360%ED%9A%8C%EC%A0%84-%ED%9B%84%EB%B0%A9%EA%B1%B0%EC%9A%B8-ea7shovp7vdj/",
-      "status": "completed"
-    },
-    {
-      "title": "거래완료",
-      "price": 30000,
-      "url": "https://www.daangn.com/kr/buy-sell/%EB%B8%8C%EB%9D%BC%EC%9D%B4%ED%85%8D%EC%8A%A4-%EB%93%80%EC%96%BC%ED%94%BD%EC%8A%A42-%ED%9A%8C%EC%A0%84%ED%98%95-isofix-%EC%B9%B4%EC%8B%9C%ED%8A%B8-11zznfgoqh8p/",
-      "status": "completed"
-    },
-    {
-      "title": "거래완료",
-      "price": 75000,
-      "url": "https://www.daangn.com/kr/buy-sell/%EC%A1%B0%EC%9D%B4-360%EB%8F%84-%ED%9A%8C%EC%A0%84-%EC%B9%B4%EC%8B%9C%ED%8A%B8-2%EA%B0%9C-weia46epkg7x/",
-      "status": "completed"
-    },
-    {
-      "title": "거래완료",
-      "price": 85000,
-      "url": "https://www.daangn.com/kr/buy-sell/%EC%A1%B0%EC%9D%B4-%EC%8A%A4%ED%95%80-360-%EC%B9%B4%EC%8B%9C%ED%8A%B8-%EB%B8%94%EB%9E%99-zzo9nxca53n8/",
-      "status": "completed"
-    },
-    {
-      "title": "거래완료",
-      "price": 150000,
-      "url": "https://www.daangn.com/kr/buy-sell/%EB%B8%8C%EB%9D%BC%EC%9D%B4%ED%85%8D%EC%8A%A4-%EB%93%80%EC%96%BC%ED%94%BD%EC%8A%A4-%EC%95%84%EC%9D%B4%EC%82%AC%EC%9D%B4%EC%A6%88-%EC%B9%B4%EC%8B%9C%ED%8A%B8-yb4cwk7gnnvj/",
-      "status": "completed"
+      "title": "아이폰 13 스타라이트 풀박스",
+      "price": 5000,
+      "url": "https://www.daangn.com/kr/buy-sell/%EC%95%84%EC%9D%B4%ED%8F%B0-13-%EC%8A%A4%ED%83%80%EB%9D%BC%EC%9D%B4%ED%8A%B8-%ED%92%80%EB%B0%95%EC%8A%A4-a12oeuvfwti4/",
+      "region": "끌올 8개월 전"
     }
   ]
 }
