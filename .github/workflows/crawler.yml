@@ -23,8 +23,8 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install playwright pandas beautifulsoup4
-          playwright install --with-deps chromium
+          # 💡 무거운 브라우저를 빼고 빠르고 가벼운 requests만 설치합니다!
+          pip install requests pandas beautifulsoup4
 
       - name: Run Crawler & Save Result
         run: python backend-crawler/main.py
