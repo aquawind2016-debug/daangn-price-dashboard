@@ -99,7 +99,7 @@ def cleanse_and_filter(data_list, keyword=""):
     keyword_clean = keyword.replace(" ", "").lower()
     condition_keyword = df['title_clean'].str.contains(keyword_clean, na=False)
     
-    clean_df = df[condition_include & condition_exclude & condition_keyword].copy()
+    clean_df = df.copy()
     clean_df = clean_df.drop_duplicates(subset=['id'])
     clean_df = clean_df.drop(columns=['title_clean'])
     
