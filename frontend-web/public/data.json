@@ -1,11 +1,11 @@
 {
-  "keyword": "수집 실패 (당근마켓 봇 차단🚨)",
+  "keyword": "수집 실패 (미국 서버 IP 완전 차단됨 🚨)",
   "average_price": 0,
   "min_price": 0,
   "max_price": 0,
   "hot_deals": [
     {
-      "title": "안전망 작동 완료! 다시 시도하거나 키워드를 변경해 보세요.",
+      "title": "당근마켓이 GitHub 서버(해외)를 완전히 차단했습니다. 로컬 PC에서 실행해야 합니다.",
       "price": 0,
       "link": "#",
       "discount_gap": 0
