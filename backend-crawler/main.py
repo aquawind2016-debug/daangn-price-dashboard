@@ -1,6 +1,5 @@
 import asyncio
 from playwright.async_api import async_playwright
-from playwright_stealth import stealth_async # 💡 스텔스 라이브러리 불러오기
 from bs4 import BeautifulSoup
 import pandas as pd
 import re
@@ -11,39 +10,33 @@ async def crawl_daangn(keyword: str, max_pages: int = 3):
     results = []
     
     async with async_playwright() as p:
-        # 1. 자동화 프로그램(봇)이라는 흔적을 지웁니다.
+        # 자동화 브라우저 특징 숨기기
         browser = await p.chromium.launch(
             headless=True,
             args=['--disable-blink-features=AutomationControlled']
         )
         
-        # 2. 한국에 있는 평범한 윈도우 사용자로 완벽하게 위장합니다.
         context = await browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
             viewport={'width': 1920, 'height': 1080},
             locale='ko-KR',
-            timezone_id='Asia/Seoul',
-            extra_http_headers={
-                'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7',
-                'Sec-Fetch-Dest': 'document',
-                'Sec-Fetch-Mode': 'navigate',
-                'Sec-Fetch-Site': 'none'
-            }
+            timezone_id='Asia/Seoul'
         )
+        
+        # 💡 핵심: 웹페이지에 "나는 봇(webdriver)이 아니다"라는 속이는 스크립트 몰래 주입하기
+        await context.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+        
         page = await context.new_page()
-        
-        # 3. 💡 핵심: 페이지에 스텔스 기능(Javascript 우회)을 덮어씌웁니다.
-        await stealth_async(page)
-        
         print(f"🔍 '{keyword}' 검색 크롤링 시작...")
 
         url = f"https://www.daangn.com/search/{keyword}"
         
         try:
-            await page.goto(url, wait_until="networkidle")
+            # 뻗는 현상 방지를 위해 domcontentloaded로 롤백
+            await page.goto(url, wait_until="domcontentloaded")
             await page.wait_for_timeout(3000) 
             
-            # 4. 사람처럼 보이게 마우스 휠을 아래로 살짝 굴립니다.
+            # 사람처럼 스크롤 내리기
             await page.mouse.wheel(0, 500)
             await page.wait_for_timeout(1000)
 
@@ -55,7 +48,7 @@ async def crawl_daangn(keyword: str, max_pages: int = 3):
                 else:
                     break
         except Exception as e:
-            print(f"⚠️ 에러 발생: {e}")
+            print(f"⚠️ 페이지 로딩 중 에러 (무시하고 계속 진행): {e}")
 
         content = await page.content()
         soup = BeautifulSoup(content, 'html.parser')
@@ -141,7 +134,7 @@ if __name__ == "__main__":
             "max_price": max_price,
             "hot_deals": hot_deals
         }
-        print("\n✅ 스텔스 우회 크롤링 성공!")
+        print("\n✅ 크롤링 성공!")
     else:
         dashboard_data = {
             "keyword": "수집 실패 (당근마켓 봇 차단🚨)",
@@ -150,14 +143,14 @@ if __name__ == "__main__":
             "max_price": 0,
             "hot_deals": [
                 {
-                    "title": "우회 기술을 적용했으나 차단되었습니다. 로직 점검이 필요합니다.",
+                    "title": "안전망 작동 완료! 다시 시도하거나 키워드를 변경해 보세요.",
                     "price": 0,
                     "link": "#",
                     "discount_gap": 0
                 }
             ]
         }
-        print("\n❌ 크롤링 실패 (차단됨)")
+        print("\n❌ 조건에 맞는 매물 없음 또는 차단됨")
 
     with open(save_path_json, 'w', encoding='utf-8') as f:
         json.dump(dashboard_data, f, ensure_ascii=False, indent=2)
